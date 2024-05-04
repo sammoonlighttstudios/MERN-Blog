@@ -19,4 +19,16 @@ app.listen(3000, () => {
   console.log("Server running on port 3000");
 })
 app.use("/api/routes",userRoutes);
-app.use('/api/auth', authRoutes)
+app.use('/api/auth', authRoutes);
+
+
+app.use((err, req, res, next) => {
+  const statusCode = err.status || 500;
+  const message = err.message || "Something went wrong";
+  return res.status(statusCode).json({
+    success: false,
+  statusCode,
+    message
+   
+  });
+});
