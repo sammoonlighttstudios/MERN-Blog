@@ -6,6 +6,8 @@ import Project from "./pages/Project"
 import Dashboard from "./pages/Dashboard"
 import SignUp from "./pages/SignUp"
 import Signin from "./pages/Signin"
+import Footer from "./components/footer"
+
 
 
 
@@ -26,8 +28,8 @@ export default function App() {
 
 
     </Routes>
-    
-    
+
+    <Footer/>
     </BrowserRouter>
   )
 }
