@@ -4,8 +4,8 @@ import { sighin, sighup } from '../controllers/auth.controller.js';
 
 const router = express.Router();
 
-router.post('/sighup', sighup);
-router.post('/sighin', sighin);
+router.post('/signup', sighup);
+router.post('/signin', sighin);
 
 
 
